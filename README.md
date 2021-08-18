@@ -1,1 +1,1 @@
-# mestrado_ft087
+# FT087 - Planejamento e Análise Experimental
