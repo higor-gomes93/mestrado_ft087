@@ -17,6 +17,7 @@ amostra$genre <- NULL
 amostra$X <- NULL
 row.names(amostra) <- NULL
 
+# Exportando o dataset como imagem
 png("c:/Users/Usuario/Documents/Mestrado/Disciplinas/FT087 - Planejamento e Análise Experimental/Documentos/dataset.png", height = 23*nrow(amostra), width = 75*ncol(amostra))
 grid.table(amostra)
 dev.off()
@@ -63,8 +64,12 @@ err_pad <- funcao_geral(erro_padrao)
 amp <- funcao_geral(amplitude)
 
 dataframe <- data.frame(linhas, media, mediana, moda, desv_pad, variancia, err_pad, amp)
-
 colnames(dataframe) <- medidas
+
+# Exportando o dataset como imagem
+png("c:/Users/Usuario/Documents/Mestrado/Disciplinas/FT087 - Planejamento e Análise Experimental/Documentos/dataset_medidas.png", height = 25*nrow(dataframe), width = 100*ncol(dataframe))
+grid.table(dataframe)
+dev.off()
 
 # Construindo o histograma
 amostra %>% gather()
