@@ -23,5 +23,31 @@ funcao_geral <- function(operation){
   return(auxiliar_vector)
 }
 
-teste <- funcao_geral(mean)
-teste
+# Construindo a função de cálculo de moda
+moda <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+# Construindo a função de cálculo de amplitude
+amplitude <- function(v) {
+  max(v) - min(v)
+}
+
+# Construindo a função de cálculo do erro padrão
+erro_padrao <- function(v) {
+  desvio_padrao/sqrt(length(v))
+}
+
+# Construindo o dataset com as medidas
+medidas <- c("Média", "Mediana", "Moda", "Desvio Padrão", "Variância", "Erro Padrão", "Amplitude")
+linhas <- colnames(amostra)
+media <- funcao_geral(mean)
+mediana <- funcao_geral(median)
+
+dataframe <- data.frame()
+
+
+
+
+
