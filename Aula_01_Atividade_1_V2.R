@@ -30,27 +30,34 @@ qtdElem
 
 #MEDIA NATIVA
 mean(ComprimentoRaiz)
+media_exemplo <- 22.08
 
 #MEDIANA NATIVA OU MEDIANA CRIADA 
 median(ComprimentoRaiz)
 getmediana(ComprimentoRaiz)
+mediana_exemplo <- 22.1
 
 #MODA CRIADA
 moda <- getmoda(ComprimentoRaiz)
 print(moda)
+moda_exemplo <- NULL
 
 #AMPLITUDE
 amplitude <- max(ComprimentoRaiz) - min(ComprimentoRaiz)
 print(amplitude)
+amplitude_exemplo <- 2.2
 
 #VARIANCIA
 variancia <- var(ComprimentoRaiz)
 print(variancia)
+variancia_exemplo <- 0.762
 
 #DESVIO PADRÃO
 desvioPadrao <- sd(ComprimentoRaiz,na.rm = FALSE)
 print(desvioPadrao)
+desvio_padrao_exemplo <- 0.873
 
 #ERRO PADRÃO
 erroPadrao <- sd(ComprimentoRaiz)/sqrt(qtdElem)
 print (erroPadrao)
+erro_padrao_exemplo <- 0.39
