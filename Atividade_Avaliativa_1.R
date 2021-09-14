@@ -1,3 +1,6 @@
+# Importação das Bibliotecas
+library(ggplot2)
+
 # Criando o dataset_1
 dataset_1 <- data.frame("Variedades" = c("A", "B", "C", "D"),
                         "R1" = c(25, 31, 22, 33),
@@ -27,4 +30,5 @@ dataset_box_2 <- data.frame("Variedades" = c(r1_label, r2_label, r3_label, r4_la
 # Gerando o boxplot
 ggplot(dataset_box_2, aes(x=Variedades, y=Dados)) + 
   geom_boxplot(fill="slateblue", alpha=0.2) + 
-  xlab("Variedades")
+  xlab("Variedades")+
+  ylab("Produção de Soja em kg/100m²")
