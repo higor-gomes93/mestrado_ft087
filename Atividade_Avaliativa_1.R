@@ -32,3 +32,24 @@ ggplot(dataset_box_2, aes(x=Variedades, y=Dados)) +
   geom_boxplot(fill="slateblue", alpha=0.2) + 
   xlab("Variedades")+
   ylab("Produção de Soja em kg/100m²")
+
+
+
+# Preparando os dados para gerar o boxplot
+r1_label_2 <- replicate(5, "A")
+r2_label_2 <- replicate(5, "B")
+r3_label_2 <- replicate(5, "C")
+r4_label_2 <- replicate(5, "D")
+r1_data_2 <- dataset_2[1:5,1]
+r2_data_2 <- dataset_2[1:5,2]
+r3_data_2 <- dataset_2[1:5,3]
+r4_data_2 <- dataset_2[1:5,4]
+varied_2 <- c(r1_data_2, r2_data_2, r3_data_2, r4_data_2)
+
+dataset_box_3 <- data.frame("Variedades" = c(r1_label_2, r2_label_2, r3_label_2, r4_label_2), "Dados" = c(varied_2))
+
+# Gerando o boxplot
+ggplot(dataset_box_3, aes(x=Variedades, y=Dados)) + 
+  geom_boxplot(fill="slateblue", alpha=0.2) + 
+  xlab("Variedades")+
+  ylab("Produção de Soja em kg/100m²")
