@@ -45,6 +45,40 @@ r <- dim(X)[2]
 
 ## Soma dos quadrados
 # SS dos resíduos
+SSE <- sum(resi^2)
+
+# SS total
+SST <- sum(y^2) - sum(y)^2/N
+
+## Graus de liberdade
+# Dos erros
+DFE <- N - r
+
+# Total
+DFT <- N - 1
+
+## Média dos quadrados
+# Dos erros
+MSE <- SSE/DFE
+
+# Total
+MST <- SST/DFT
+
+# t calculado
+t0 <- coef/sqrt(MSE/N)
+t0
+
+# t crítico
+t_critico <- qt(0.05, df = DFE, lower.tail = F)
+t_critico
+
+# pvalue
+pvalue <- 2*pt(abs(t0), df = DFE, lower.tail = F)
+pvalue
+
+
+
+
 
 
 
