@@ -140,4 +140,44 @@ y_esp_hat
 
 #--------------------------------------------------------------------------------#
 
+## Análise via pacote FrF2 e comando lm
+# via FrF2
+install.packages("FrF2")
+library(FrF2)
+
+# Planejamento
+plan2 <- FrF2(nruns = 4, nfactors = 2, replications = 3, factor.names = c("C", "T"), randomize = F)
+summary(plan2)
+
+# Adicionando resposta
+plan2$y <- y
+
+# Modelo linear via FrF2
+lm1 <- lm(y ~ C*T, data = plan2)
+summary(lm1)
+
+# Via expand.grid e lm
+lm2 <- lm(y ~ C*T, data = plan)
+summary(lm1)
+
+# ANOVA
+anova1 <- aov(lm2)
+summary(anova1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
